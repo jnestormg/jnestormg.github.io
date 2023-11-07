@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Edu+TAS+Beginner:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Bellota+Text:wght@400;700&family=Edu+TAS+Beginner:wght@500&family=Italiana&family=Lexend+Zetta&family=Marcellus+SC&family=Roboto:wght@100&family=Turret+Road:wght@200;500&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +10,18 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
+.fondo {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(30deg, rgb(44, 40, 128), rgb(95, 95, 243), rgb(51, 188, 223), rgb(101, 238, 248));
+    background: linear-gradient(30deg, rgba(44, 40, 128), rgb(95, 95, 243), rgb(51, 188, 223), rgb(101, 238, 248));
+    position: relative;
+    background-size: 400% 400%;
+    animation: animar 5s ease infinite;
+}
+.fondoP {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(30deg, rgba(44, 40, 128,0.2), rgba(95, 95, 243,0.2), rgba(51, 188, 223,0.2), rgba(101, 238, 248,0.2));
     position: relative;
     background-size: 400% 400%;
     animation: animar 5s ease infinite;
@@ -47,22 +55,22 @@ body {
 }
 .datos{
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    border-radius: 25px;
+    border-radius: 7px;
     padding: 2rem 3rem;
-    width: 90%;
-    box-shadow: 5px 5px 5px #4a0186;
+    width: 95%;
 
 }
 .nombre{
-    color: aliceblue;
-    font-family: 'Amatic SC', cursive;
-    font-size: 40px;
+    color: rgb(10, 88, 177);
+    font-family: 'Bellota Text', sans-serif;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(85, 84, 84, 0.2);
 }
 .presentacion{
-    color:white;
-    font-family: 'Comfortaa', sans-serif;
+    color: rgb(5, 25, 92);
+    font-family: 'Bellota Text', sans-serif;
     font-size: 20px;
+    float:left ;
 }
 
 .list {
@@ -77,17 +85,17 @@ body {
 }
 
 .cv {
-    background-color: rgba(14, 32, 192, 0.3);
-    box-shadow: 5px 5px 5px rgba(39, 37, 37, 0.5);
+    background-color: rgba(14, 32, 192, 0.5);
+    box-shadow: 5px 5px 5px rgba(75, 72, 233, 0.3);
     border-radius: 20px;
     border: 1px solid rgba(white, white, white, 0.80);
-    color: white;
+    color: rgb(255, 253, 253);
     padding: 1rem 2rem;
-    font-family: 'Amatic SC';
-    font-size: 25px;
+    font-family: 'Bellota Text';
+    font-size: 20px;
     text-decoration: none;
-    margin: 10px;
-    float: left;
+    margin-top: 20px;
+    float:right;
 
 }
 
@@ -173,8 +181,12 @@ body {
     background-color: rgba(39, 37, 37, 0.5);
     color: white;
     display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
+    
 
 }
 .nav_links{
@@ -186,9 +198,9 @@ body {
     background-color:rgba(51, 50, 50, 0.2);
     display: grid;
     place-items: center;
-    clip-path: circle(0% at top right);
+    clip-path: circle(0% at top left);
     transition: clip-path .5s;
-    z-index: 1;
+    z-index: 100;
     backdrop-filter: blur(20px);
 }
 .nav_link{
@@ -198,9 +210,55 @@ body {
     font-size: 4em;
 }
 .nav_links:target{
-    clip-path: circle(150% at top right);
+    clip-path: circle(150% at top left);
 }
 .nav_link:target{
-    clip-path: circle(150% at top right);
+    clip-path: circle(150% at top left);
 
+}
+.skills{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(14, 32, 192, 0.2);
+}
+.input_f{
+    position: relative;
+    padding: 25px;
+}
+.input_f input{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 25px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #beff25;
+    outline: none;
+    font-size: 20px;
+}
+.input_f label{
+    position:absolute;
+    top: 0;
+    left: 15px;
+    padding: 0 15px;
+    font-size: 25px;
+    font-family: 'Amatic SC';
+    color: #fff;
+}
+.input_f textarea{
+    width: 300px;
+    height: 80px;
+    border-radius: 6px;
+    padding: 0 25px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #beff25;
+    outline: none;
+    font-size: 20px;
+}
+h3{
+    color: #fff;
+    font-family: 'Amatic SC';
+    font-size: 30px;
+    text-align: center;
 }
