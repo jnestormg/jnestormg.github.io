@@ -76,7 +76,7 @@ body {
 }
 
 .cv {
-    background-color: #4a0186;
+    background-color: rgba(14, 32, 192, 0.3);
     border-radius: 20px;
     border: 1px solid rgba(white, white, white, 0.80);
     color: white;
@@ -168,7 +168,7 @@ body {
 .nav{
     padding: 0 40px;
     height: 80px;
-    background-color: #333;
+    background-color: rgba(39, 37, 37, 0.5);
     color: white;
     display: flex;
     align-items: center;
@@ -181,12 +181,13 @@ body {
     bottom: 0;
     top: 80px;
     right: 0;
-    background-color:rgba(51, 50, 50, 0.9);
+    background-color:rgba(51, 50, 50, 0.2);
     display: grid;
     place-items: center;
     clip-path: circle(0% at top right);
     transition: clip-path .5s;
     z-index: 1;
+    backdrop-filter: blur(20px);
 }
 .nav_link{
     text-decoration: none;
